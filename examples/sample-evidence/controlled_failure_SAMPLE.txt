@@ -1,0 +1,17 @@
+##############################################################
+# SAMPLE / ILLUSTRATIVE OUTPUT - NOT FROM A REAL AWS RUN
+# IDs are placeholders. Replace with your own real results.
+##############################################################
+SG: sg-0SAMPLEAPPB  Region: ap-south-1
+ICMP rule id: sgr-0SAMPLEICMP
+
+### BEFORE (expect success)
+4 packets transmitted, 4 received, 0% packet loss
+
+### REMOVING ICMP rule
+### DURING (expect 100% loss)
+4 packets transmitted, 0 received, 100% packet loss
+
+### RESTORING exact rule (ICMP type 8 code 0 from 10.10.2.10/32)
+### AFTER (expect success)
+4 packets transmitted, 4 received, 0% packet loss

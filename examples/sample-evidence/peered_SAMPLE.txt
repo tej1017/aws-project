@@ -1,0 +1,30 @@
+##############################################################
+# SAMPLE / ILLUSTRATIVE OUTPUT - NOT FROM A REAL AWS RUN
+# IDs are placeholders. Replace with your own real results.
+##############################################################
+Phase: peered   Date: 2026-01-01T00:20:00Z
+
+== Test 02 Forward: App-A -> App-B
+ip-10-10-2-10.ap-south-1.compute.internal
+10.10.2.10
+PING 10.20.1.10 (10.20.1.10) 56(84) bytes of data.
+64 bytes from 10.20.1.10: icmp_seq=1 ttl=127 time=1.2 ms
+64 bytes from 10.20.1.10: icmp_seq=2 ttl=127 time=0.9 ms
+64 bytes from 10.20.1.10: icmp_seq=3 ttl=127 time=0.9 ms
+64 bytes from 10.20.1.10: icmp_seq=4 ttl=127 time=0.8 ms
+
+--- 10.20.1.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss
+
+== Test 03 Reverse: App-B -> App-A
+ip-10-20-1-10.ap-south-1.compute.internal
+10.20.1.10
+4 packets transmitted, 4 received, 0% packet loss
+
+== Test 04 Private SSH to App-B through bastion
+connected-to-ip-10-20-1-10.ap-south-1.compute.internal
+
+== Test 05 Isolation (PublicIpAddress: None = no public IP)
+ewb-bastion   i-0SAMPLEBASTION   10.10.1.10   203.0.113.25
+ewb-app-a     i-0SAMPLEAPPA      10.10.2.10   None
+ewb-app-b     i-0SAMPLEAPPB      10.20.1.10   None

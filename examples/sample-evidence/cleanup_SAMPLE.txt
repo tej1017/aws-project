@@ -1,0 +1,11 @@
+##############################################################
+# SAMPLE / ILLUSTRATIVE OUTPUT - NOT FROM A REAL AWS RUN
+# IDs are placeholders. Replace with your own real results.
+##############################################################
+## Instances (not terminated)
+## Volumes
+## VPCs
+## Peering
+## Elastic IPs
+## Key pair ewb-lab
+InvalidKeyPair.NotFound   (expected after cleanup)

@@ -1,0 +1,24 @@
+##############################################################
+# SAMPLE / ILLUSTRATIVE OUTPUT - NOT FROM A REAL AWS RUN
+# IDs are placeholders. Replace with your own real results.
+##############################################################
+vpc_a            = "vpc-0SAMPLEA"
+vpc_b            = "vpc-0SAMPLEB"
+subnet_a_public  = "subnet-0SAMPLEAPUB"
+subnet_a_private = "subnet-0SAMPLEAPRIV"
+subnet_b_private = "subnet-0SAMPLEBPRIV"
+igw_a            = "igw-0SAMPLE"
+peering          = "pcx-0SAMPLE"
+
+ewb-rt-a-public   rtb-0SAMPLE1   associated: subnet-0SAMPLEAPUB
+   10.10.0.0/16 -> local         active
+   0.0.0.0/0    -> igw-0SAMPLE   active
+   10.20.0.0/16 -> pcx-0SAMPLE   active
+ewb-rt-a-private  rtb-0SAMPLE2   associated: subnet-0SAMPLEAPRIV
+   10.10.0.0/16 -> local         active
+   10.20.0.0/16 -> pcx-0SAMPLE   active
+ewb-rt-b-private  rtb-0SAMPLE3   associated: subnet-0SAMPLEBPRIV
+   10.20.0.0/16 -> local         active
+   10.10.0.0/16 -> pcx-0SAMPLE   active
+
+Peering ewb-a-b-peer  pcx-0SAMPLE  active  vpc-0SAMPLEA 10.10.0.0/16 <-> vpc-0SAMPLEB 10.20.0.0/16

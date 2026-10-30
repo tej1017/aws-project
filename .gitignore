@@ -1,0 +1,9 @@
+*.pem
+*.pem.pub
+*.key
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+ssh_config.generated
+crash.log
